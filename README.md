@@ -1,4 +1,4 @@
-# F55121006_FelisyaBrigitaTaniaWong_UASPAA2
+# F55121006_FelisyaBrigitaTaniaWong_UASPAA2_AlgorithmAnalysis
 
 ANALISIS SORTING ALGORITHM
 1.	Worst Case: Bubble Sort: Pada worst case, Bubble Sort memiliki kompleksitas waktu O(n^2). Hal ini terjadi ketika elemen-elemen dalam array terurut secara terbalik, sehingga setiap elemen perlu dipindahkan ke posisi yang tepat dengan melakukan perbandingan dan pertukaran pada setiap pasangan elemen. Insertion Sort: Pada worst case, Insertion Sort memiliki kompleksitas waktu O(n^2). Hal ini terjadi ketika elemen-elemen dalam array terurut secara terbalik, sehingga setiap elemen perlu dipindahkan ke posisi yang tepat dengan melakukan perbandingan dan penempatan pada posisi yang benar.
