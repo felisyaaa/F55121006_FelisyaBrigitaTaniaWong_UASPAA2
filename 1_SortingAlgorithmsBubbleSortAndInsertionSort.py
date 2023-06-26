@@ -36,12 +36,12 @@ def insertion_sort(arr):
 
 
 def print_iterations(arr, sort_name):
-    print(f"\n{sort_name} Sort - 5 Iterasi Pertama:")
+    print(f"\nFirst 5 iterations of {sort_name} Sort:")
     for i in range(min(5, len(arr))):
         print(arr[i], end=" ")
     print("\n")
 
-    print(f"{sort_name} Sort - 5 Iterasi Terakhir:")
+    print(f"Last 5 iterations of {sort_name} Sort:")
     for i in range(max(len(arr) - 5, 0), len(arr)):
         print(arr[i], end=" ")
     print("\n")
@@ -53,10 +53,10 @@ def main():
            32, 5, 3, 44, 21, 10, 21, 17, 50, 2, 36, 53, 79, 54, 19, 88, 1, 32, 31, 15, 6,
            3, 1, 40, 22, 43, 18, 1, 77, 9, 59, 40, 7, 41, 81]
 
-    print("Sebelum pengurutan:")
+    print("Before sorting:")
     print(arr)
 
-    choice = input("1. Bubble \n2. Insertion \nPilih metode pengurutan: ")
+    choice = input("1. Bubble Sort\n2. Insertion Sort\nChoose sorting method: ")
     if choice == "1":
         sorted_arr, execution_time = bubble_sort(arr.copy())
         sort_name = "Bubble"
@@ -64,14 +64,14 @@ def main():
         sorted_arr, execution_time = insertion_sort(arr.copy())
         sort_name = "Insertion"
     else:
-        print("Pilihan tidak valid. Program berakhir.")
+        print("Invalid choice. Program ends.")
         return
 
-    print("\nSetelah pengurutan:")
+    print("\nAfter sorting:")
     print(sorted_arr)
 
     print_iterations(sorted_arr, sort_name)
-    print(f"Waktu komputasi pengurutan: {execution_time} detik")
+    print(f"Sorting computation time: {execution_time} seconds")
 
 
 if __name__ == "__main__":
