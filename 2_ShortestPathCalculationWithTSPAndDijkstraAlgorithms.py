@@ -16,7 +16,7 @@ def tsp(graph):
 
         if count == num_cities and graph[curr_city][0] > 0:
             min_cost = min(min_cost, cost + graph[curr_city][0])
-            return
+            print(f"Iteration: {path + [0]} - Cost: {cost + graph[curr_city][0]}")
 
         for next_city in range(num_cities):
             if not visited[next_city] and graph[curr_city][next_city] > 0:
@@ -59,16 +59,12 @@ def dijkstra(graph, start):
                 if new_dist < distances[next_vertex]:
                     distances[next_vertex] = new_dist
                     heapq.heappush(pq, (new_dist, next_vertex))
+                    print(f"Iteration: {curr_vertex} -> {next_vertex} - Distance: {new_dist}")
 
     end_time = time.time()
     execution_time = end_time - start_time
 
     return distances, execution_time
-
-
-def print_path(path):
-    path_str = " -> ".join(path)
-    print(f"Shortest Path: {path_str}")
 
 
 def main():
@@ -99,10 +95,10 @@ def main():
     elif choice == "2":
         start_vertex = int(input("Enter the start vertex: "))
         dijkstra_distances, dijkstra_time = dijkstra(graph, start_vertex)
-        print("Shortest Path Distances (Dijkstra):")
+        print("\nShortest Path Distances (Dijkstra):")
         for i, distance in enumerate(dijkstra_distances):
             print(f"Vertex {i}: {distance}")
-        print(f"Execution Time (Dijkstra): {dijkstra_time} seconds")
+        print(f"\nExecution Time (Dijkstra): {dijkstra_time} seconds")
 
     else:
         print("Invalid choice.")
