@@ -1,3 +1,5 @@
+# F55121006 - Felisya Brigita Tania Wong
+
 import sys
 import time
 import heapq
@@ -106,4 +108,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-1
